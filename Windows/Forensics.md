@@ -20,8 +20,6 @@ RegBack- backup of registries
 Every user profile has a NTUSER.DAT. Plugs into the user as a current user (that users chunk of info in a registry)
 HKEY_CURRENT_USER is basically NTUSER.DAT 
 
-Shellbags: The customization (looks, icon size, sort) of a file explorer directory. Includes deleted paths.
-  - Can also be found in USRCLASS.dat
   
   ### USB
   CurrentControlSet will only be on a live system
@@ -34,6 +32,17 @@ Shellbags: The customization (looks, icon size, sort) of a file explorer directo
   Match the serial number to find the Volume GUID (Globably Unique Identifer) 
   Find the serial number to obtain the Drive Letter of the USB
   Using the Volume GUID found in SYSTEM\MountedDevices, you can find hte user that mounted that device.
+  
+  
+  ## Definitions
+  - **NTUSER.dat**: contains the the settings and preferencs for each user (installed prorgrans, desktop background, monitor res, ect). Stores information in the HKEY_CURRENT_USER hive then when you sign in or out, Windows saves that info to the NTUSER file.
+  - **USRCLASS.dat**: where user profile info is stored.
+    - Used to record configuration information from user processes that do not hasve access to write to the standard registry hives.
+    - Needs to parse both USRCLASS * NTUSER for each user account to get all the Shellbags information.
+  - **Shellbags**: The customization (looks, icon size, sort) of a file explorer directory. Includes deleted paths.
+     - Can also be found in USRCLASS.dat
+     - May also show the folders or servers that employees should not access.
+  
   
     
 
