@@ -33,6 +33,29 @@ HKEY_CURRENT_USER is basically NTUSER.DAT
   Find the serial number to obtain the Drive Letter of the USB
   Using the Volume GUID found in SYSTEM\MountedDevices, you can find hte user that mounted that device.
   
+  HKLM\SYSTEM\CurrentControlSet\Enum\USBSTOR\Ven_Prod_Version\USB iSerial
+  0064= First Install 
+  0066= Last Connected
+  0067= Last Removal
+  
+  ### MISC.
+  HKLM\ControlSet001\Control\TimeZoneInformation
+  \Control\ComputerName
+  \Control\FileSystem
+  \Servcies\Tcpip 
+  
+  HKLM\Software\Microsoft\Windows NT\CurrentVersion\NetworkList
+   
+   - \Signatrues
+      - Managed
+      - Unmanaged
+   
+   - \Nla
+      - Cache
+      
+      Network types and first and last connected times will be in \profiles\(GUID)
+ 
+ When you see a shortcut for example in file explorer in reality its a filename.txt.lnk file
   
   ## Definitions
   - **NTUSER.dat**: contains the the settings and preferencs for each user (installed prorgrans, desktop background, monitor res, ect). Stores information in the HKEY_CURRENT_USER hive then when you sign in or out, Windows saves that info to the NTUSER file.
@@ -47,8 +70,15 @@ HKEY_CURRENT_USER is basically NTUSER.DAT
       - Tracks metadata such as the full file path, last modified data, and file size but only contains the information proor to the systems last startup.
      - Can use this key to identify systems that specific malware was executed on.
      - Found in *SYSTEM\CurrentControlSet\Control\SessionManager\AppCompatCache*
+  - LNK files - windows shortcut. Leads to alot of metadata
+      - MAC times
+      - Size of the target when it was last accessed
+      - Serial number of the volume where the target was stored
+      - MAC address of the host computer (sometimes)
+ - Jump List: features added in Win7 that gives users a quick way to access recent applications.
+      
      
- - k
+ 
   
   
     
