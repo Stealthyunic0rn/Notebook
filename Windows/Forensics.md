@@ -19,3 +19,6 @@ RegBack- backup of registries
 
 Every user profile has a NTUSER.DAT. Plugs into the user as a current user (that users chunk of info in a registry)
 HKEY_CURRENT_USER is basically NTUSER.DAT 
+
+Shellbags: The customization (looks, icon size, sort) of a file explorer directory. Includes deleted paths.
+  - Can also be found in USRCLASS.dat
