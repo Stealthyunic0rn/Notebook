@@ -42,6 +42,13 @@ HKEY_CURRENT_USER is basically NTUSER.DAT
   - **Shellbags**: The customization (looks, icon size, sort) of a file explorer directory. Includes deleted paths.
      - Can also be found in USRCLASS.dat
      - May also show the folders or servers that employees should not access.
+   - **MRU**: most recently used
+   - **Shimcache**: used by the OS to identify appliaction compatability issues.
+      - Tracks metadata such as the full file path, last modified data, and file size but only contains the information proor to the systems last startup.
+     - Can use this key to identify systems that specific malware was executed on.
+     - Found in *SYSTEM\CurrentControlSet\Control\SessionManager\AppCompatCache*
+     
+ - k
   
   
     
