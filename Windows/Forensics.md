@@ -22,3 +22,20 @@ HKEY_CURRENT_USER is basically NTUSER.DAT
 
 Shellbags: The customization (looks, icon size, sort) of a file explorer directory. Includes deleted paths.
   - Can also be found in USRCLASS.dat
+  
+  ### USB
+  CurrentControlSet will only be on a live system
+  To find the last used ControlSet, check the Select path.
+  
+  Globaly Unique Serial numbers have a & at the second to last char in the number.
+  Mathcing the VID & PID to the serail points gives you more information of the make and model of the device.
+  
+  HKLM\SYSTEM\MountedDevices
+  Match the serial number to find the Volume GUID (Globably Unique Identifer) 
+  Find the serial number to obtain the Drive Letter of the USB
+  Using the Volume GUID found in SYSTEM\MountedDevices, you can find hte user that mounted that device.
+  
+    
+
+  
+  
